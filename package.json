@@ -22,7 +22,8 @@
   },
   "pkg": {
     "scripts": [
-      "dist/**/*.js"
+      "dist/**/*.js",
+      "node_modules/yoga-layout/**/*.js"
     ],
     "assets": [
       "dist/**/*",
