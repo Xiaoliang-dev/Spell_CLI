@@ -15,17 +15,17 @@ jobs:
           - os: ubuntu-latest
             platform: linux
             arch: x64
-            target: node18-linux-x64
+            target: linux-x64-20.18.0
             ext: ''
           - os: macos-latest
             platform: macos
             arch: x64
-            target: node18-macos-x64
+            target: mac-x64-20.18.0
             ext: ''
           - os: windows-latest
             platform: windows
             arch: x64
-            target: node18-win-x64
+            target: windows-x64-20.18.0
             ext: '.exe'
 
     name: Build ${{ matrix.platform }}-${{ matrix.arch }}
@@ -50,7 +50,7 @@ jobs:
         run: npm run build
 
       - name: Package binary
-        run: npx pkg dist/index.js --targets ${{ matrix.target }} --output ai-cli-${{ matrix.platform }}-${{ matrix.arch }}${{ matrix.ext }}
+        run: npx nexe dist/index.js --target ${{ matrix.target }} --output ai-cli-${{ matrix.platform }}-${{ matrix.arch }}${{ matrix.ext }}
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
