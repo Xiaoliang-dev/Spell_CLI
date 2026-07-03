@@ -1,0 +1,47 @@
+{
+  "name": "ai-cli",
+  "version": "2.0.0",
+  "description": "AI Command Line Client with Agent System - A Claude Code-like TUI",
+  "main": "dist/index.js",
+  "type": "module",
+  "bin": {
+    "ai-cli": "./dist/index.js"
+  },
+  "files": ["dist", "plugins", "skills"],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.tsx",
+    "start": "node dist/index.js",
+    "watch": "tsc --watch",
+    "package": "pkg dist/index.js --targets node20-linux-x64,node20-macos-x64,node20-macos-arm64,node20-win-x64 --out-path=releases/",
+    "package:all": "npm run build && npm run package"
+  },
+  "pkg": {
+    "scripts": ["dist/**/*.js"],
+    "assets": ["dist/**/*"],
+    "targets": ["node20-linux-x64", "node20-macos-x64", "node20-macos-arm64", "node20-win-x64"],
+    "outputPath": "releases/"
+  },
+  "keywords": ["ai", "cli", "tui", "chat", "openai", "agent", "multi-agent"],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "boxen": "^8.0.1",
+    "chalk": "^5.6.2",
+    "dotenv": "^17.4.2",
+    "figures": "^6.1.0",
+    "ink": "^6.8.0",
+    "openai": "^6.45.0",
+    "ora": "^9.4.1",
+    "react": "^19.2.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.0",
+    "@types/react": "^19.2.17",
+    "tsx": "^4.22.5",
+    "typescript": "^6.0.3"
+  }
+}
