@@ -17,7 +17,7 @@
     "dev": "tsx src/index.tsx",
     "start": "node dist/index.js",
     "watch": "tsc --watch",
-    "package": "pkg dist/index.js --targets node20-linux-x64,node20-macos-x64,node20-macos-arm64,node20-win-x64 --out-path=releases/",
+    "package": "pkg dist/index.js --targets node20-linux-x64,node20-macos-x64,node20-win-x64 --out-path=releases/",
     "package:all": "npm run build && npm run package"
   },
   "pkg": {
@@ -30,7 +30,6 @@
     "targets": [
       "node20-linux-x64",
       "node20-macos-x64",
-      "node20-macos-arm64",
       "node20-win-x64"
     ],
     "outputPath": "releases/"
