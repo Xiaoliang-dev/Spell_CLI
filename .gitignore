@@ -35,7 +35,6 @@ Thumbs.db
 coverage/
 
 # Lockfiles (if you prefer one package manager, keep only that lockfile)
-package-lock.json
 pnpm-lock.yaml
 
 # Spell_CLI specific
