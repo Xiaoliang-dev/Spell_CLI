@@ -65,5 +65,10 @@
     "into-stream": "^6.0.0",
     "tsx": "^4.22.5",
     "typescript": "^6.0.3"
+  },
+  "overrides": {
+    "@yao-pkg/pkg": {
+      "into-stream": "^6.0.0"
+    }
   }
 }
