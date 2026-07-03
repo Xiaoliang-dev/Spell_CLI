@@ -22,10 +22,12 @@
   },
   "pkg": {
     "scripts": [
-      "dist/**/*.js"
+      "dist/**/*.js",
+      "node_modules/yoga-layout/**/*.js"
     ],
     "assets": [
-      "dist/**/*"
+      "dist/**/*",
+      "node_modules/yoga-layout/dist/binaries/yoga-wasm-base64-esm.js"
     ],
     "targets": [
       "node22-linux-x64",
